@@ -1,0 +1,17 @@
+.tracks {
+  background-color: #150a18;
+  color: #db5dfe;
+  font-size: 5vw;
+}
+.tracks ul {
+  padding: 0px;
+  margin: 0px;
+}
+.tracks li {
+  list-style: none;
+  border-bottom: 1px solid #1db954;
+  padding-bottom: 3px;
+  padding-top: 10px;
+  padding-left: 0px;
+  transition: all 0.2s ease-in;
+}

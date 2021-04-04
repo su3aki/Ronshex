@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Economica&family=Open+Sans&family=Sawarabi+Mincho&display=swap");
+.App {
+  background-color: #150a18;
+  color: #1db954;
+  min-height: 100vh;
+  font-family: "Economica", "Sawarabi Mincho", sans-serif;
+  padding-right: 2.5vw;
+  padding-left: 2.5vw;
+}
