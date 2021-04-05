@@ -137,7 +137,7 @@ const Search = React.memo((props) => {
         <div className={classes.snackBar}>
           <Snackbar open={snackBarOpen} autoHideDuration={4000} onClose={handleSnackBarClose}>
             <Alert severity="success" action={
-              <Button size="small" variant="outlined" color="secondary" onClick={() => handleDataView()}>open!</Button>}>
+              <Button size="small" variant="contained" onClick={() => handleDataView()}>open!</Button>}>
               データグラフとおすすめ曲が準備されました
             </Alert>
           </Snackbar>
@@ -254,7 +254,7 @@ const Search = React.memo((props) => {
           <br />曲をクリックすると解析が始まります。
           <br />再生/停止はアートワークでも操作可能です。
           <br /><NotInterestedIcon style={{ color: "#7f7f7f",fontSize: 15 }} />
-          は権利元によりプレビューが許可されていません。
+          ボタンは権利元によりプレビューが許可されていません。
           <br /><Logo/>ボタンを押すとSpotifyのアプリまたはwebに遷移します。
         </Typography>
         {itemResult !== undefined

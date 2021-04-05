@@ -61,7 +61,7 @@ const Top = () => {
           <Grid xs={1} lg={2} >
           </Grid>
           <Grid xs={10} lg={8}>
-          <Typography variant="h3"><br />Search from here↓</Typography>
+          <Typography variant="h3"><br /><br />Search from here↓</Typography>
           <form className={classes.root} noValidate onSubmit={handleSubmit}>
             <TextField
               id="standard-basic"
