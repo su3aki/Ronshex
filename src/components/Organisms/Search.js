@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import ArtistParams from '../Molecules/ArtistParams'
+import ParamsGraph from '../Molecules/ParamsGraph'
 import QueryTracks from "../Molecules/QueryTracks"
+import {ReactComponent as Logo } from '../Atoms/SpotifyLogo.svg'
 import Recommend from '../Molecules/Recommend'
 import ReTrackParams from '../Molecules/ReTrackParams'
-import ParamsGraph from '../Molecules/ParamsGraph'
-import { WaveLoading } from 'react-loadingg';
 import TrackCard from '../Molecules/TrackCard'
 import TrackParams from '../Molecules/TrackParams'
 import Trail from '../Atoms/Trail'
+import { WaveLoading } from 'react-loadingg';
 import { Button, Typography } from '@material-ui/core'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
@@ -93,7 +94,7 @@ const Search = React.memo((props) => {
       flex: 1,
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
     },
   }))
   const classes = useStyles()
@@ -213,22 +214,24 @@ const Search = React.memo((props) => {
         <Grid item xs={12} sm={6} style={{ display: graphReDisplay}}>
         {lookRecommend !== undefined
           && (artistInfo.genres) !== undefined
-              && <div className="recommend">
-                RecommendList
-                {(artistInfo.genres).slice(0, 3).map(
+              && <>
+              <Grid >
+              <Typography variant="h3" style={{ color: "#d0d1ff" }}>
+              RecommendList</Typography>
+                {/* {(artistInfo.genres).slice(0, 3).map(
                   (props, index) =>
-                    <Button color="secondary">{props}</Button>)}
-
+                  <Button color="secondary">{props}</Button>)} */}
+                  </Grid>
               <ul>
               {lookRecommend.map((props) =>
                 <li
-                  key={props.id}
-                  onClick={() => setSelectedRecommend({
-                    reTrackArtwork: props.album.images[1].url,
-                    reTrackId: props.id,
-                    reTrackName: props.name,
-                    reTrackPopularity: props.popularity
-                  })}>
+                key={props.id}
+                onClick={() => setSelectedRecommend({
+                  reTrackArtwork: props.album.images[1].url,
+                  reTrackId: props.id,
+                  reTrackName: props.name,
+                  reTrackPopularity: props.popularity
+                })}>
                   <TrackCard
                     audioId={props.id}
                     artistName={props.album.artists[0].name}
@@ -243,20 +246,21 @@ const Search = React.memo((props) => {
                   </TrackCard>
                 </li>
               )}
-            </ul></div>
+            </ul></>
         }
         </Grid>
         </Grid>
-        <Typography variant="subtitle2" style={{fontSize: 13}}>
+        <Typography variant="subtitle2" style={{color:"#ff87d6",fontSize: 13}}>
           <br />曲をクリックすると解析が始まります。
           <br />再生/停止はアートワークでも操作可能です。
           <br /><NotInterestedIcon style={{ color: "#7f7f7f",fontSize: 15 }} />
           は権利元によりプレビューが許可されていません。
+          <br /><Logo/>ボタンを押すとSpotifyのアプリまたはwebに遷移します。
         </Typography>
         {itemResult !== undefined
           && itemResult.length === 0
           ? <><WaveLoading size={'large'} color="#1db954" speed={1} /></>
-          :<>TrackList
+          :<><Typography variant="h3" color="secondary">TrackList</Typography>
           <ul onClick={handleSnackBarOpen}>
               {itemResult.map((props) =>
                 <li

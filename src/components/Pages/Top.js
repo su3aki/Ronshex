@@ -59,7 +59,6 @@ const Top = () => {
         <Header />
         <Grid container  spacing={1}>
           <Grid xs={1} lg={2} >
-            da
           </Grid>
           <Grid xs={10} lg={8}>
           <Typography variant="h3"><br />Search from here↓</Typography>
@@ -85,7 +84,6 @@ const Top = () => {
           }
           </Grid>
           <Grid xs={1} lg={2}>
-          da
           </Grid>
         </Grid>
       </ThemeProvider>

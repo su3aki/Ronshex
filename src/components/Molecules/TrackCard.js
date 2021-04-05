@@ -1,14 +1,13 @@
 import React from 'react'
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import {ReactComponent as Logo } from '../Atoms/SpotifyLogo.svg'
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Typography from "@material-ui/core/Typography";
-import {ReactComponent as Logo } from '../Atoms/SpotifyLogo.svg'
-import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import NotInterestedIcon from '@material-ui/icons/NotInterested';
 import PauseCircleOutlineIcon from '@material-ui/icons/PauseCircleOutline';
-import { Button } from '@material-ui/core';
+import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
+import Typography from "@material-ui/core/Typography";
 
 const TrackCard = React.memo((props) => {
   const useStyles = makeStyles((theme) => ({
