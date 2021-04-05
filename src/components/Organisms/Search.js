@@ -136,7 +136,7 @@ const Search = React.memo((props) => {
         <div className={classes.snackBar}>
           <Snackbar open={snackBarOpen} autoHideDuration={4000} onClose={handleSnackBarClose}>
             <Alert severity="success" action={
-              <Button size="small" onClick={() => handleDataView()}>open!</Button>}>
+              <Button size="small" variant="outlined" color="secondary" onClick={() => handleDataView()}>open!</Button>}>
               データグラフとおすすめ曲が準備されました
             </Alert>
           </Snackbar>

@@ -14,8 +14,7 @@ const Header = React.memo(() => {
       },
       secondary: {
         main: '#DF0869'
-      }}
-
+      }},
   })
   theme.typography.h3 = {
   fontSize: '1.2rem',
