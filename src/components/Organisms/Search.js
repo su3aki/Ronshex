@@ -254,8 +254,8 @@ const Search = React.memo((props) => {
           <br />曲をクリックすると解析が始まります。
           <br />再生/停止はアートワークでも操作可能です。
           <br /><NotInterestedIcon style={{ color: "#7f7f7f",fontSize: 15 }} />
-          ボタンは権利元によりプレビューが許可されていません。
-          <br /><Logo/>ボタンを押すとSpotifyのアプリまたはwebに遷移します。
+          は権利元によりプレビューが許可されていません。
+          <br /><Logo/>を押すとSpotifyのアプリまたはwebに遷移します。
         </Typography>
         {itemResult !== undefined
           && itemResult.length === 0
