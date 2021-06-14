@@ -49,7 +49,7 @@ const Top = () => {
       color: "#1db954"
     }
   }
-})
+  })
   const classes = useStyles()
   const labelClasses = useLabelStyles()
   return (
@@ -57,11 +57,11 @@ const Top = () => {
       <ThemeProvider theme={theme}>
         <Credentials setToken={ setToken }/>
         <Header />
-        <Grid container  spacing={1}>
-          <Grid xs={1} lg={2} >
+        <Grid container style={{ paddingTop:"140px"}}>
+          <Grid item xs={1} lg={2} >
           </Grid>
-          <Grid xs={10} lg={8}>
-          <Typography variant="h3"><br /><br />Search from here↓</Typography>
+          <Grid item xs={10} lg={8}>
+          <Typography variant="h3">Search from here</Typography>
           <form className={classes.root} noValidate onSubmit={handleSubmit}>
             <TextField
               id="standard-basic"
@@ -81,9 +81,9 @@ const Top = () => {
               <br />グラフ表示を押すと・・・？
             </Typography>
             : <Search token={token} wordFormData={wordFormData} />
-          }
+            }
           </Grid>
-          <Grid xs={1} lg={2}>
+          <Grid item xs={1} lg={2}>
           </Grid>
         </Grid>
       </ThemeProvider>

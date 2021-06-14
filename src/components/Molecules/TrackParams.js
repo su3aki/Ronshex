@@ -18,9 +18,9 @@ const TrackParams = (props) => {
       })
   }, [props.id])
   return (
-    <div>
+    <>
       { props.setTrackInfo }
-    </div>
+    </>
   )
 }
 export default TrackParams;

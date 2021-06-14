@@ -19,9 +19,9 @@ const ReTrackParams = (props) => {
       })
   }, [props.id])
   return (
-    <div>
+    <>
       { props.setReTrackInfo }
-    </div>
+    </>
   )
 }
 export default ReTrackParams;

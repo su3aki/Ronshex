@@ -3,7 +3,7 @@ import {ReactComponent as Logo } from '../Atoms/SpotifyLogo.svg'
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import NotInterestedIcon from '@material-ui/icons/NotInterested';
 import PauseCircleOutlineIcon from '@material-ui/icons/PauseCircleOutline';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
@@ -83,7 +83,6 @@ const TrackCard = React.memo((props) => {
     ButtonLooks = true
   }
   const classes = useStyles();
-  const theme = useTheme()
   return (
     <div>
       <Card className={classes.root} elevation={2}>

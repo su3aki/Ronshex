@@ -22,9 +22,9 @@ const QueryTracks = React.memo((props) => {
   }, [props.wordFormData]
   )
   return (
-    <div>
+    <>
       { props.setItemResult }
-    </div>
+    </>
   )
 })
 export default QueryTracks;
