@@ -15,14 +15,14 @@ const Credentials = React.memo((props) => {
       console.log(
           "アクセストークン："
           + tokenResponse.data.access_token)
-          {props.setToken(tokenResponse.data.access_token)}
+          props.setToken(tokenResponse.data.access_token)
     }
     )
   }, [])
   return (
-    <div>
+    <>
       { props.setToken }
-    </div>
+    </>
   )
   })
 export default Credentials;

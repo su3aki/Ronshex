@@ -113,6 +113,9 @@ const Search = React.memo((props) => {
       }
     }
   })
+  console.log("選んだ曲")
+  console.log(selectedTrack.trackArtistId)
+  console.log(token)
   console.log(artistInfo.genres)
   console.log(playSrc)
   console.log(playing)
@@ -144,7 +147,7 @@ const Search = React.memo((props) => {
         </div>
         {/* 選ばれた曲のアーティスト情報を取得 */}
         {/* 発火条件：トラック選択完了後 */}
-        { selectedTrack.length !== 0
+        { selectedTrack.trackArtistId.length !== 0
           &&<ArtistParams token={token}
             artistId={selectedTrack.trackArtistId}
             setArtistInfo={setArtistInfo} />}
@@ -176,7 +179,7 @@ const Search = React.memo((props) => {
           </Grid>
           <Grid item className={classes.volumeBar} xs={8} sm={4}>
               <ThemeProvider theme={theme}>
-              <Slider value={volumeToggle} color='green' min={0} step={0.001} max={1} onChange={handleChange} aria-labelledby="continuous-slider" />
+              <Slider value={volumeToggle} min={0} step={0.001} max={1} onChange={handleChange} aria-labelledby="continuous-slider" />
               </ThemeProvider>
           </Grid>
           <Grid item className={classes.volumeBar} xs={2} sm={1} >

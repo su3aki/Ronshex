@@ -19,9 +19,9 @@ const ArtistParams = React.memo((props) => {
       })
   }, [props.artistId])
   return (
-    <div>
+    <>
       { props.setArtistInfo }
-    </div>
+    </>
   )
 })
 export default ArtistParams;

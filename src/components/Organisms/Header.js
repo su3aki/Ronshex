@@ -3,8 +3,10 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import Link from '@material-ui/core/Link'
 import { createMuiTheme } from '@material-ui/core/styles'
 import { ThemeProvider } from '@material-ui/styles'
+
 const Header = React.memo(() => {
 
   const theme = createMuiTheme({
@@ -14,7 +16,9 @@ const Header = React.memo(() => {
       },
       secondary: {
         main: '#DF0869'
-      }},
+      }
+    },
+
   })
   theme.typography.h3 = {
   fontSize: '1.2rem',
@@ -30,9 +34,13 @@ const Header = React.memo(() => {
     <React.Fragment>
       <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar>
+        <AppBar style={{ minHeight: '56px'}} >
           <Toolbar>
-          <Typography color="secondary" variant="h3">Ronshex</Typography>
+              <Link href="/">
+            <Typography color="secondary" variant="h3">
+                Ronshex
+            </Typography>
+              </Link>
         </Toolbar>
       </AppBar>
       </ThemeProvider>

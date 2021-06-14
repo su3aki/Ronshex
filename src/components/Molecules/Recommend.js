@@ -20,9 +20,9 @@ const Recommend = (props) => {
       })
   }, [props.trackId])
   return (
-    <div>
+    <>
       { props.setLookRecommend }
-    </div>
+    </>
   )
 
 }

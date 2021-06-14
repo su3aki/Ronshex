@@ -129,18 +129,6 @@ const ParamsGraph = React.memo((props) => {
     }
   </Grid>
   </ThemeProvider>
-      {/* {(props.FirstArtwork).length !== 0
-        &&<Grid item xs={6} sm={2}>
-        <img src={props.FirstArtwork}
-        width="200" height="200"/>
-        </Grid>
-      } */}
-      {/* {(props.ReArtwork).length !==0
-        && <Grid item xs={6} sm= {2}>
-        <img src={props.ReArtwork}
-        width="200" height="200"/>
-        </Grid>
-      } */}
   </>
   )
 })
