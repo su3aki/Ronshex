@@ -72,7 +72,14 @@ const Top = () => {
               fullWidth
               variant="filled"
               color="secondary"
-              onChange={(e) => setWordFormData(e.target.value)}/>
+              onChange={(e) => {
+                if (e.target.value.length <= 30) {
+                  setWordFormData(e.target.value)
+                } else {
+                  alert("最大入力文字数は30文字です。")
+                }
+                }}
+              />
           </form>
           {wordFormData.length === 0
             ? <Typography variant="h5">
